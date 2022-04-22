@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Graph</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="gray top"></div>
+    <div id="control-panel">        
+        <div id="speed-wrap">
+            <span class="label">speed: </span>
+            <span class="button red" onclick="barSpeed('stop')">stop</span>
+            <span class="button yellow" onclick="barSpeed('slow')">slow</span>
+            <span class="button blue" onclick="barSpeed('normal')">normal</span>
+            <span class="button blue" onclick="barSpeed('fast')">fast</span>
+            <span class="button blue" onclick="barSpeed('wayfast')">way fast</span>
+        </div>
+
+        <div id="variance-wrap">
+            <span class="label">variance:</span>
+            <span class="label" id="maxDiffView">05</span>
+            <span class="button blue" id="minus-button" onclick="maxDiff-=5;document.getElementById('maxDiffView').innerHTML=maxDiff">&nbsp;- </span>
+            <span class="button blue" onclick="maxDiff+=5;document.getElementById('maxDiffView').innerHTML=maxDiff">&nbsp;+&nbsp;</span>
+        </div>
+
+        <div id="cause-wrap">
+            <span class="label">cause:</span>
+            <span class="button blue" onclick="lastNumber=10">drop</span>
+            <span class="button blue" onclick="lastNumber=280">spike</span>
+            <span class="button blue" onclick="lastNumber+=maxDiff">good day</span>
+            <span class="button blue" onclick="lastNumber-=maxDiff">bad day</span>
+        </div>
+    </div>
+    <div class="gray bottom"></div>
+    <div id="graph-container">
+        <hr id="hr1"><hr id="hr2"><hr id="hr3">
+    </div>
+    <script type="text/javascript" src="script.js" ></script>
+</body>
+</html>

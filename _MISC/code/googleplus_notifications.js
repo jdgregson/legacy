@@ -1,0 +1,1 @@
+self.setInterval(function(){var not=document.getElementById("gbi1");var titleDefault="Google+";if(not.innerHTML=="0"||not.innerHTML=="&nbsp;"){document.title=titleDefault;}else{document.title=titleDefault + " (" + not.innerHTML + ")";}}, 1000);

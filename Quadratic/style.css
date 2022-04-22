@@ -1,0 +1,24 @@
+p {
+    color: #cccccc;
+    font-family: Tahoma;
+    font-size: 12pt;
+    }
+
+iframe {
+    border: 0px;
+    }
+
+input {
+    font-family: Tahoma;
+    font-size: 25px;
+    color: #aaaaaa;
+    }
+
+#input_bar {
+    background-color: #eeeeee;
+    }
+
+a {
+    text-decoration: none;
+    color: #cccccc;
+    font-family: Tahoma;

@@ -1,0 +1,29 @@
+<html>
+ <head>
+  <title>Revese!</title>
+  <script type="text/javascript">
+  
+   function revGetter(rev) {
+    display = document.getElementById("display");
+    display.src = "reverse.php?s=" + rev;
+   }
+  </script>
+ </head>
+ <body>
+  <iframe id="display" src="reverse.php" width="300">
+  
+  </iframe>
+  <form>
+  <table width="300">
+   <tr>
+    <td>
+     <input type="text" name="rev" value="Hello!"/>
+    </td>
+    <td align="right">
+     <input type="button" value="Reverse!" onclick="revGetter(rev.value)" />
+    </td>
+   </tr>
+  </table>
+  </form>
+ </body>
+</html>

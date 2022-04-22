@@ -1,0 +1,52 @@
+#include <fstream>
+#include <iostream>
+#include <stdlib.h>
+
+// Corbin 
+// 02-01-11
+	
+using namespace std;
+
+// functions
+
+int newUser() {
+  cout<<"I am a new user"; 
+}
+
+int listUsers() {
+  cout<<"I am a list of users";
+}
+
+// MAIN
+int main() {
+
+// declaring variables for main
+char uname[30];
+char passwd[30];
+int action;
+
+// main output (instructions)
+  cout<<"1 = list users\n";
+  cout<<"2 = new user\n";
+  cout<<"(1/2): ";
+         // get input from user
+  cin>> action;
+  cin.ignore();
+        // prevent invalid variable usage
+    if (action > 2 || action < 1) {
+      cout<<"Error: " << action <<" is not a valid switch";
+      return 1;
+    }
+// switches for main   
+  switch(action) {
+    case 1:  
+             listUsers();
+             break;
+    case 2:  
+             newUser();
+             break;
+    default: 
+             cout<<"null";
+  }   
+  return 0;
+}

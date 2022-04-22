@@ -1,0 +1,4 @@
+Highest Score of All Time: 
+Jonny                  100
+
+Other Scores:

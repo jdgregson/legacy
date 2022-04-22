@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html> 
+	<head> 
+		<title>BuildingBlox - jdgregson</title> 
+		<meta name="description" content="BuildingBlox - Use your mouse to move blox around your screen. What cool creation can you make?" /> 
+		<meta name="keywords" content="BuildingBlox, buildingblox, building blox, building blocks, buildingblocks,jdgregson, JdGregson, JDGregson, JDGREGSON, jdgregson.com" /> 
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+		<link rel="shortcut icon" href="http://www.jdgregson.com/images/build/favicon.ico" /> 
+		<link rel="stylesheet" type="text/css" href="http://www.jdgregson.com/a.css" /> 
+		<script type="text/javascript" src="dragiframe.js"></script>	
+		<script type="text/javascript" src="base.js"></script>
+<script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17852774-3']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script> 
+</head> 
+	<body> 
+ 
+ <table height="705px" width="100%" border="0"> 
+		<tr> 
+			<td width="110"> 
+	<img id="pallet" src="pallet2.png" height="700px" width="100px"/>
+<!--WHITE--> 
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;z-index:2;"  SRC="white.html"></IFRAME> 
+	<div style="position:absolute;top:124px;left:46px;z-index:1;"><button onclick="mkWhite()" style="color:#0093dd;">*</button></div>
+<!--BLACK--> 
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;z-index:2;" SRC="black.html"></IFRAME> 
+	<div style="position:absolute;top:174px;left:46px;z-index:1;"><button onclick="mkBlack()" style="color:#0093dd;">*</button></div>
+<!--RED--> 
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;z-index:2;" SRC="red.html"></IFRAME> 
+	<div style="position:absolute;top:224px;left:46px;z-index:1;"><button onclick="mkRed()" style="color:#0093dd;">*</button></div>
+<!--GREEN--> 
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;z-index:2;" SRC="green.html"></IFRAME> 
+	<div style="position:absolute;top:274px;left:46px;z-index:1;"><button onclick="mkGreen()" style="color:#0093dd;">*</button></div>
+<!--BLUE--> 
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;z-index:2;" SRC="blue.html"></IFRAME> 
+	<div style="position:absolute;top:324px;left:46px;z-index:1;"><button onclick="mkBlue()" style="color:#0093dd;">*</button></div>
+<!--YELLOW--> 
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;z-index:2;" SRC="yellow.html"></IFRAME> 
+	<div style="position:absolute;top:374px;left:46px;z-index:1;"><button onclick="mkYellow()" style="color:#0093dd;">*</button></div>
+<!--BROWN--> 
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;z-index:2;" SRC="brown.html"></IFRAME> 
+	<div style="position:absolute;top:424px;left:46px;z-index:1;"><button onclick="mkBrown()" style="color:#0093dd;">*</button></div>
+<!--PINK--> 
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;z-index:2;" SRC="pink.html"></IFRAME> 
+	<div style="position:absolute;top:474px;left:46px;z-index:1;"><button onclick="mkPink()" style="color:#0093dd;">*</button></div>
+	<div style="position:absolute;top:524px;left:36px;z-index:1;"><button onclick="mkAll()" style="color:#0093dd;">*all*</button></div>
+	<button name="restart" onclick="reloadPage()" style="position:absolute;top:590px;left:31px;color:#0093dd;">Restart</button>
+					</td> 
+						<td  style="background:url('bg/bloxBg.png');background-repeat:no-repeat;background-size:100% 705px;"><table height="99%" width="99%" border="0" id="bgcolor" align="center"><tr><td><img id="hoverPic" src="bg/white.png" height="100%" width="100%" /></td></tr></table> 
+					</td> 
+				</tr> 
+			</table> 
+			<table><tr><td><p class="blox-style">Like BuildingBlox? Help support it and projects like it by<a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=t4HmRiJW3jYeR8Z5aoTnIPxlZNEuGfCpnSVy0IvRek48c_uV_1kYsn7FWs0&dispatch=5885d80a13c0db1f8e263663d3faee8dc18bca4c6f47e633b393e284a5f8a8f8" target="_blank"> donating.</a> Layout and design by <a href="http://www.jdgregson.com" target="_blank">jdgregson</a> JavaScript engine by <a href="http://mattkruse.com/" target="_blank">Matt Kruse.</a></p></td> 
+				<td><div id="hoverArea"><img src="bg/w_thumb.png" /></div></td> 
+				<td><div id="hoverArea2"><img src="bg/b_thumb.png" /></div></td> 
+				<td><div id="hoverArea3"><img src="bg/g_thumb.png" /></div></td> 
+				<td><div id="hoverArea4"><img src="bg/h_thumb.png" /></div></td> 
+				<td><div id="hoverArea5"><img src="bg/c_thumb.png" /></div></td> 
+				<td><div id="hoverArea6"><img src="bg/cd_thumb.png" /></div></td> 
+			</tr></table> 
+<script type="text/javascript" src="background.js"></script> 
+<div id="welcome" ><table cellpadding="25px" style="position:absolute;top:100px;left:200px;background:url('bg/welcomeBg.png');background-repeat:no-repeat;background-size:100%100%;"><tr align="right"><td height="200px" width="300px" ><center><p class="menu1">Welcome to BuildingBlox!</p></center><br/><p class="text-style">BuildingBlox! Drag the colored boxes around the screen to make things. After you move a block, click the "*" button to make a new one. Click "*all*" to make another copy of all blocks. Click the pictures at the bottom to change the background. What can you build?<br/><br/>TIP: If you drag the blox slower, they move a lot easier.</p><br/><input style="color:#0093dd;" type="button" onclick="hideWel()" value="&nbsp;&nbsp;&nbsp;ok&nbsp;&nbsp;&nbsp;"></input></td></tr></table></div> 
+ <p id="bloxAbout" href="#" onclick="about()" style="position:absolute;bottom:-4px;right:5px;">about</p>
+<p id="hideBt" class="blox-style" href="#" onclick="hidePallet()" style="position:absolute;top:40px;left:50px;">hide</p>
+<p id="showBt" class="blox-style" href="#" onclick="showPallet()" style="position:absolute;top:40px;left:50px;display:none;">show</p>
+ <table><tr><td><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.jdgregson.com%2Fbuildingblox%2F&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:auto; height:35px; background-color:#ffffff;" allowTransparency="true"></iframe></td></tr></table> 
+			</body> 
+</html>

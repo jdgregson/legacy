@@ -1,0 +1,13 @@
+body
+{
+    background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.line
+{
+    position: absolute;
+    top: 0px;
+    font-family: Courier New;
+}

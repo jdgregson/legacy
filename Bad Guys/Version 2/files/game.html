@@ -1,0 +1,424 @@
+<html>
+    <head>
+        <script type="text/javascript">
+ 
+ /*
+  * Copyright: 2011, Corbin <jdgregson@gmail.com>
+  * 
+  * Written 09/18 - 09/19, 2011
+  * Modified 01/13/12
+  * Modified 02/17/12:
+  *     -- added ceiling spawning (just for Char :)
+  *
+  * This program is free software; you can redistribute it and/or modify it
+  * under the terms of the GNU General Public License as published by the
+  * Free Software Foundation; either version 2, or (at your option) any
+  * later version.
+  *
+  * This program is distributed in the hope that it will be useful,
+  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  * GNU General Public License for more details.
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+  *
+  *
+  */
+ 
+ /******* VARIABLES (obviously) *******/
+   
+ // These adjust game settings.  
+ 
+ // deathCountdownTime is  how long after spawning the badguy shoots you (in ms)
+ // spawnDelay is how long the game waits before spawning a new badguy (in ms)
+ if (document.location.search == "?easy") {
+     var deathCountdownTime = 5000; // easy
+     var spawnDelay = 1000;
+     var difficultyModifier = 1;
+ }
+  else if (document.location.search == "?normal") {
+     var deathCountdownTime = 2000; // normal
+     var spawnDelay = 2000;
+     var difficultyModifier = 2;
+ }
+  else if (document.location.search == "?hard") {
+     var deathCountdownTime = 1000; // hard
+     var spawnDelay = 4000;
+     var difficultyModifier = 4
+ }
+  else if (document.location.search == "?extreme") {
+     var deathCountdownTime = 500; // extreme. This is basically impossible.
+     var spawnDelay = 8000;
+     var difficultyModifier = 8;
+ }
+ else {
+     var deathCountdownTime = 2000; // default (same as normal)
+     var spawnDelay = 2000;
+     var difficultyModifier = 2;
+ }
+    
+ // Don't change these, they are used by the game's runtime.
+ var mouse_x = null;
+ var mouse_y = null;
+ var current_gunbarrel = 1;
+ var bulletholes = 0;
+ var badguys = 0;
+ var headshotTargets = 0;
+ var chestshotTargets = 0;
+ var kills = 0;
+ var score = 0;
+   
+ /******* OBJECTS *******/
+  
+ // Here we set up our objects. 
+ // The positions of some of these
+ // are set during the runtime.
+  
+ background = document.createElement("IMG");
+ background.setAttribute("src", "art/background.png");
+ background.setAttribute("style", "position:absolute;width:100%;height:100%;");
+  
+ gunsite = document.createElement("IMG");
+ gunsite.setAttribute("src", "art/gunsite8.png"); 
+ gunsite.setAttribute("height", "700px");  
+ 
+ scoreDisplay = document.createElement("P");
+ scoreDisplay.innerHTML = "0";
+ 
+ gunbarrel = document.createElement("IMG");
+ gunbarrel.setAttribute("src", "art/blank-barrel-left-2.png");
+ gunbarrel.setAttribute("style", "position:absolute;left:50%;bottom:0;z-index:102;"); 
+ 
+ badguy = document.createElement("IMG");
+ badguyCeiling = document.createElement("IMG");
+ badguy.setAttribute("src", "art/badguy.png");
+ badguyCeiling.setAttribute("src", "art/badguy-ceiling.png");
+
+ headshotTarget = document.createElement("IMG");
+ headshotTarget.setAttribute("src", "art/headshot-target-2.png");
+ headshotTarget.setAttribute("onclick", "despawnBadguy('head')");
+ 
+ headshotTargetCeiling = document.createElement("IMG");
+ headshotTargetCeiling.setAttribute("src", "art/headshot-target-2.png");
+ headshotTargetCeiling.setAttribute("onclick", "despawnBadguyCeiling('head')");
+
+ chestshotTarget = document.createElement("IMG");
+ chestshotTarget.setAttribute("src", "art/chestshot-target-2.png");
+ chestshotTarget.setAttribute("onclick", "despawnBadguy('chest')");
+ 
+ chestshotTargetCeiling = document.createElement("IMG");
+ chestshotTargetCeiling.setAttribute("src", "art/chestshot-target-2.png");
+ chestshotTargetCeiling.setAttribute("onclick", "despawnBadguyCeiling('chest')");
+ 
+ soundPlayer = document.createElement("EMBED");
+ //soundPlayer.setAttribute("style", "display:none;");
+ 
+ // Each bullethole needs its own name, so we
+ // will use a function to spawn them dynamically.
+ // 'n' is the name of the new bullethole.
+ // Something doesn't work right, though. 
+ // You can't reference the new object after it 
+ // is loaded, so despawning after this method is
+ // not possible yet.
+ function bullethole(n,x,y) {
+     n = document.createElement("IMG");
+     // Semi-randomly choose which bullethole to use
+     T = Math.random();
+     if (T > 0.5) {
+         n.setAttribute("src", "art/bullethole-2.png");
+     }
+     else {
+         n.setAttribute("src", "art/bullethole-1.png");
+     }
+     n.setAttribute("id", "bullethole_" + bulletholes);
+     n.setAttribute("style", "position:absolute;left:" + x + ";top:" + y + ";z-index:1;");
+     document.body.appendChild(n);
+     bulletholes = bulletholes +1;
+ }
+ 
+ /******* CORE FUNCTIONS *******/
+
+ // Main runtime function. It listens to the mouse movement.
+ function main(e) {
+     // get the mouse coordinates
+     if (!e) var e = window.event;
+     if (e.pageX || e.pageY) {mouse_x = e.pageX;mouse_y = e.pageY;}
+     // mouse coordinates are now contained in the variables 'mouse_x' and 'mouse_y'
+  
+     // move the gunsite to where the mouse is
+     _x = mouse_x - 155;
+     _y = mouse_y - 145;
+     gunsite.setAttribute("style", "position:absolute;top:" + _y + ";left:" + _x + ";z-index:100;");
+     scoreDisplay.setAttribute("style",  "font-family:tahoma;font-weight:bold;font-size:10;color:red;position:absolute;top:" + (_y + 250) + ";left:" + (_x  + 150) + ";z-index:1000;");
+     scoreDisplay.innerHTML = score;
+  
+     // Animate the gun barrel.
+     w = window.innerWidth; // get window width
+     // divide it by three
+     third_1 = w / 3;
+     third_2 = w / 3 * 2;
+     third_3 = w;
+     
+     // More math. Find out which third of the screen the
+     // mouse is currently in.
+     if (mouse_x < third_1) {
+          new_gunbarrel = 1;
+     }
+     else if (mouse_x > third_1 && mouse_x < third_2) {
+          new_gunbarrel = 2;
+     }
+     else if (mouse_x > third_2) {
+          new_gunbarrel = 3;
+     }
+     // Set the new gunbarrel ONLY if the third of the screen 
+     // which the cursor occupies has changed.
+     // Otherwise, we would be loading a new image for every
+     // single pixel that the cursor moves. Not good.
+     if (new_gunbarrel != current_gunbarrel) {
+          if (new_gunbarrel == 1) {gunbarrel.setAttribute("src", "art/blank-barrel-left-2.png");gunbarrel.style.left="40%"}
+          else if (new_gunbarrel == 2) {gunbarrel.setAttribute("src", "art/blank-barrel-center-2.png");gunbarrel.style.left="50%"}
+          else if (new_gunbarrel == 3) {gunbarrel.setAttribute("src", "art/blank-barrel-right-2.png");gunbarrel.style.left="50%"}
+          current_gunbarrel = new_gunbarrel;
+     }
+ }
+ 
+ function spawnBadguy() {
+     if (badguys == 0) {
+          // Create the x/y coordinates for 
+          // all of the elements of the 
+          // badguy.
+          h = window.innerHeight;
+          w = window.innerWidth;
+          spawnpoint = storyline(kills);
+          _y = h / 2;
+          _x = w / spawnpoint;
+          o_x = _x + 20;
+          o_y = _y + 50;
+   
+          // add the badguy
+          badguy.setAttribute("style", "position:absolute;left:" + _x + ";top:" + _y + ";z-index:1;");
+          headshotTarget.setAttribute("style", "position:absolute;left:" + o_x + ";top:" + _y + ";z-index:101;");
+          chestshotTarget.setAttribute("style", "position:absolute;left:" + o_x + ";top:" + o_y + ";z-index:101;");
+          addObject(badguy);
+          addObject(headshotTarget);
+          addObject(chestshotTarget);
+   
+         // tell everything that there is a badguy, 
+         // and start the deathCountdown
+          badguys += 1;
+          headshotTargets += 1;
+          chestshotTargets += 1;
+          kills += 1;
+          deathCountdown = this.setTimeout("storyEnd('fail')", deathCountdownTime);
+     }
+ }
+ 
+  // see spawnBadguy() for comments
+  function spawnBadguyCeiling() { // for Char
+     if (badguys == 0) {
+          w = window.innerWidth;
+          spawnpoint = storyline(kills);
+          _x = w / spawnpoint;
+          o_x = _x + 20;
+          o_y = _y + 50;
+   
+          badguyCeiling.setAttribute("style", "position:absolute;left:" + _x + ";top:0;z-index:1;");
+          headshotTargetCeiling.setAttribute("style", "position:absolute;left:" + o_x + ";top:55;z-index:101;");
+          chestshotTargetCeiling.setAttribute("style", "position:absolute;left:" + o_x + ";top:110;z-index:101;");
+          addObject(badguyCeiling);
+          addObject(headshotTargetCeiling);
+          addObject(chestshotTargetCeiling);
+          
+          badguys += 1;
+          headshotTargets += 1;
+          chestshotTargets += 1;
+          kills += 1;
+          deathCountdown = this.setTimeout("storyEnd('fail')", deathCountdownTime);
+     }
+ }
+ 
+ function despawnBadguy(target) {
+     // Right now, there can only be one badguy
+     // at a time. I was going to spawn them the 
+     // way I pulled off bullethole(), but I
+     // wasn't able to despawn them properly.
+     document.body.removeChild(badguy);
+     document.body.removeChild(headshotTarget);
+     document.body.removeChild(chestshotTarget);
+  
+      // Tell everything that the badguy is dead,
+      // and stop the deathCountdown
+     badguys -= 1;
+     headshotTargets -= 1;
+     chestshotTargets -= 1;
+     self.clearTimeout(deathCountdown);
+     
+      if (target == "head") {
+        score += (2 * difficultyModifier);
+     } else {
+        score += (1 * difficultyModifier);;
+     }
+ }
+ 
+  // See despawnBadguy() for comments
+  function despawnBadguyCeiling(target) {
+     document.body.removeChild(badguyCeiling);
+     document.body.removeChild(headshotTargetCeiling);
+     document.body.removeChild(chestshotTargetCeiling);
+     
+     badguys -= 1;
+     headshotTargets -= 1;
+     chestshotTargets -= 1;
+     self.clearTimeout(deathCountdown);
+     
+     if (target == "head") {
+        score += (2 * difficultyModifier);
+     } else {
+        score += (1 * difficultyModifier);;
+     }
+ }
+ 
+ function addObject(obj) {
+     document.body.appendChild(obj);
+ }
+ 
+ function removeObject(obj) {
+     if (obj) {
+          document.body.removeChild(obj);
+     }
+ }
+ 
+ function animateGunshot(e) {
+     n = "bullethole_" + bulletholes;
+     bulletholes = bulletholes + 1;
+     center_x = mouse_x - 10;
+     center_y = mouse_y - 10;
+     bullethole(n,center_x,center_y);
+ }
+ 
+ function storyline(i) {
+     // This sets where the badguys will spawn.
+     // Each number is the divisor of the screen.
+     // '1' won't work, because the badguy will
+     // spawn off screen, and you have to scroll
+     // to shoot him. 
+     if (i == 0) {return 1.25}
+     if (i == 1) {return 3}
+     if (i == 2) {return 2.5}
+     if (i == 3) {return 1.50}
+     if (i == 4) {return 2.50}
+     if (i == 5) {return 3.5}
+     if (i == 6) {return 1.25}
+     if (i == 7) {return 3}
+     if (i == 8) {return 3}
+     if (i == 9) {return 1.50}
+     if (i == 10) {return 2}
+     if (i == 11) {return 1.75}
+     if (i == 12) {return 1.50}
+     if (i == 13) {return 3}
+     if (i == 14) {return 3}
+     if (i == 15) {return 1.75}
+     if (i == 16) {return 2.50}
+     if (i == 17) {return 3}
+     if (i == 18) {return 1.25}
+     if (i == 19) {return 3.1}
+     if (i == 20) {return 3}
+     if (i == 21) {return 2.50}
+     if (i == 22) {return 2.75}
+     if (i == 23) {return 3.5}
+     if (i > 23) {storyEnd('win')};
+ }
+ 
+ // Just a hack.
+ // Something wasn't working, making it so 
+ // you were able to die after you already won. 
+ // So now storyEnd() can only run once. 
+ gameAlreadyOver = false;
+ 
+ function storyEnd(result) {
+     if (gameAlreadyOver == true){return false}
+     gameAlreadyOver = true;
+ 
+     self.clearInterval(spawner);
+  
+     if (result == 'fail') {
+         fadeRed(1);
+     }
+     else {
+         fadeWhite(1);
+     }
+     // Unload the game objects
+     removeObject(background);
+     removeObject(gunsite);
+     removeObject(gunbarrel);
+  
+     // Create and load the endgame banner
+     placex = window.innerWidth / 4;
+     placey = window.innerHeight / 4;
+     banner = document.createElement("TABLE");
+     banner.setAttribute("width", "50%");
+     banner.setAttribute("height", "50%");
+     banner.setAttribute("style", "position:absolute;z-index:1001;left:" + placex + ";top:" + placey);
+     document.body.setAttribute("style","cursor:arrow"); // Release the cursor
+     addObject(banner);
+      
+     // Fill the banner with the proper content
+     if (result == 'fail') {
+         banner.innerHTML = "<tr><td align='center'><h1>You died! :(</h1></td></tr><tr><td align='center'><h2>Your score: " + score + "</h2><button onclick='submitScore()'>Submit Score</button></td></tr><tr><td align='center'><button onclick='window.location.reload()'>Play again</button></td></tr><tr><td><br><h2 align='center'>Reload the page to go back to the menu...</h2></td></tr>";
+     }
+     else if (result == 'win') {
+         banner.innerHTML = "<tr><td align='center'><h1>You won! :D</h1></td></tr><tr><td align='center'><h2>Your score: " + score + "</h2><button onclick='submitScore()'>Submit Score</button></td></tr><tr><td align='center'><button onclick='window.location.reload()'>Play again</button></td></tr><tr><td><br><h2 align='center'>Reload the page to go back to the menu...</h2></td></tr>";
+     }
+ }
+ 
+ function submitScore() {
+    document.location = "../score.php?score=" + score;
+ }
+ 
+ function fadeWhite(run) {
+     // Animate the screen fading to white.
+     if (run > 10 || run < 0) {return "Index must be between 1 and 10"}
+     if (run < 10) {n = "0." + run;}
+     else if (run == 10) {n = "10";} 
+     light = document.createElement("SPAN");
+     light.setAttribute("style","position:absolute;top:0px;bottom:0px;left:0px;right:0px;z-index:1000;background:rgba(255,255,255,"+n+");");
+     document.body.appendChild(light);
+     next = run + 1;
+     self.setTimeout("fadeWhite("+next+")", 50);
+ }
+ 
+ function fadeRed(run) {
+     // Animate the screen fading to red.
+     if (run > 10 || run < 0) {return "Index must be between 1 and 10"}
+     if (run < 10) {n = "0." + run;}
+     else if (run == 10) {n = "10";} 
+     light = document.createElement("SPAN");
+     light.setAttribute("style","position:absolute;top:0px;bottom:0px;left:0px;right:0px;z-index:1000;background:rgba(255,0,0,"+n+");");
+     document.body.appendChild(light);
+     next = run + 1;
+     self.setTimeout("fadeRed("+next+")", 200);
+ }
+ 
+ // Kickstarter
+ function init(el) {
+     // make the document listen to the mouse movement
+     el.onmousemove = main;if(el.captureEvents)el.captureEvents(Event.MOUSEMOVE);
+     // make the document listen to the mouse clicks
+     el.onclick = animateGunshot;if(el.captureEvents)el.captureEvents(Event.CLICK);
+     // add objects
+     addObject(background);
+     addObject(gunsite);
+     addObject(gunbarrel);
+     addObject(scoreDisplay);
+     
+     spawnBadguy();
+     spawner = self.setInterval("spawnBadguy()", spawnDelay);
+     spawner = self.setInterval("spawnBadguyCeiling()", spawnDelay * 2);
+ }
+        </script>
+    </head>
+    <body onload="init(this)" style="cursor: none;overflow:hidden;" bgcolor="ffffff">
+    </body>
+</html>

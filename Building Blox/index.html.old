@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+	<head>
+		<title>BuildingBlox - jdgregson</title>
+		<meta name="description" content="BuildingBlox - Use your mouse to move blox around your screen. What cool creation can you make?" />
+		<meta name="keywords" content="BuildingBlox, buildingblox, building blox, building blocks, buildingblocks,jdgregson, JdGregson, JDGregson, JDGREGSON, jdgregson.com" />
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<link rel="shortcut icon" href="http://www.jdgregson.com/images/build/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="http://www.jdgregson.com/a.css" />
+		<script type="text/javascript" src="dragiframe.js" />		
+		
+<script type="text/javascript"> <!--
+bringSelectedIframeToTop(true);
+
+function welcome()
+{
+document.getElementBuId("welcome").style.display="";
+}
+function hideWel()
+{
+document.getElementById("welcome").style.display="none";
+}
+
+function reloadPage()
+  {
+  window.location.reload()
+  }
+  
+function popitup(url) {
+	newwindow=window.open(url,'name','height=500,width=500');
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+
+
+// -->
+</script>
+
+<script type="text/javascript"><!--
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17852774-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+//--></script>
+
+		<style type="text/css">
+		
+			#bgcolor	{
+				background-color: ;
+				}
+
+				
+		</style>
+
+</head>
+		<body onload="welcome()">
+
+
+		<table height="705px" width="100%" border="0">
+			<tr>
+				<td width="110">
+		
+		
+		<img src="pallet2.png" height="700px" width="100px"/>
+
+<!--WHITE-->
+ 
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	<IFRAME NAME="white" ID="white" border="0" STYLE="width:25px;height:25px;position:absolute;top:120px;left:44px;" SRC="white.html"></IFRAME>
+	
+<!--BLACK-->
+ 
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	<IFRAME NAME="black" ID="black" border="0" STYLE="width:25px;height:25px;position:absolute;top:170px;left:44px;" SRC="black.html"></IFRAME>
+	
+<!--RED-->
+ 
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	<IFRAME NAME="red" ID="red" border="0" STYLE="width:25px;height:25px;position:absolute;top:220px;left:44px;" SRC="red.html"></IFRAME>
+	
+<!--GREEN-->
+ 
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	<IFRAME NAME="green" ID="green" border="0" STYLE="width:25px;height:25px;position:absolute;top:270px;left:44px;" SRC="green.html"></IFRAME>
+	
+<!--BLUE-->
+ 
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	<IFRAME NAME="blue" ID="blue" border="0" STYLE="width:25px;height:25px;position:absolute;top:320px;left:44px;" SRC="blue.html"></IFRAME>
+	
+<!--YELLOW-->
+ 
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	<IFRAME NAME="yellow" ID="yellow" border="0" STYLE="width:25px;height:25px;position:absolute;top:370px;left:44px;" SRC="yellow.html"></IFRAME>
+	
+<!--BROWN-->
+ 
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+	<IFRAME NAME="brown" ID="brown" border="0" STYLE="width:25px;height:25px;position:absolute;top:420px;left:44px;" SRC="brown.html"></IFRAME>
+
+<!--PINK-->
+ 
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+	<IFRAME NAME="pink" ID="pink" border="0" STYLE="width:25px;height:25px;position:absolute;top:470px;left:44px;" SRC="pink.html"></IFRAME>
+
+	
+<button name="restart" onclick="reloadPage()" style="position:absolute;top:590px;left:31px;color:#0093dd;">Restart</button>
+					</td>
+						<td  style="background:url('bg/bloxBg.png');background-repeat:no-repeat;background-size:100% 705px;"><table height="99%" width="99%" border="0" id="bgcolor" align="center"><tr><td><img id="hoverPic" src="bg/white.png" height="100%" width="100%" /></td></tr></table>
+					</td>
+					
+				</tr>
+			</table>
+			<table><tr><td><p class="blox-style">Like BuildingBlox? Help support it and projects like it by<a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=yDHV354dnBJVNdqMikddGS1lSKiiXezPC4xMVkNdvX3Xrdw-un5Gkag-qsm&dispatch=5885d80a13c0db1f8e263663d3faee8dc18bca4c6f47e633b393e284a5f8a8f8" target="_blank"> donating.</a> Layout and design by <a href="http://www.jdgregson.com" target="_blank">jdgregson</a> JavaScript engine by <a href="http://mattkruse.com/" target="_blank">Matt Kruse.</a></p></td>
+				<td><div id="hoverArea"><img src="bg/w_thumb.png" /></div></td>
+				<td><div id="hoverArea2"><img src="bg/b_thumb.png" /></div></td>
+				<td><div id="hoverArea3"><img src="bg/g_thumb.png" /></div></td>
+				<td><div id="hoverArea4"><img src="bg/h_thumb.png" /></div></td>
+				<td><div id="hoverArea5"><img src="bg/c_thumb.png" /></div></td>
+				<td><div id="hoverArea6"><img src="bg/cd_thumb.png" /></div></td>
+			</tr></table>
+			
+			
+			
+			
+			
+				<script type="text/javascript"> 
+ 
+		<!--
+		
+			var hoverTrg=document.getElementById("hoverArea6");
+			
+			var hoverImg=document.getElementById("hoverPic");
+			
+			hoverTrg.onclick=function(){
+			
+				hoverImg.src="bg/city_day.png";
+				
+			}
+		
+			var hoverTrg=document.getElementById("hoverArea5");
+			
+			var hoverImg=document.getElementById("hoverPic");
+			
+			hoverTrg.onclick=function(){
+			
+				hoverImg.src="bg/city.png";
+				
+			}	
+		
+			var hoverTrg=document.getElementById("hoverArea4");
+			
+			var hoverImg=document.getElementById("hoverPic");
+			
+			hoverTrg.onclick=function(){
+			
+				hoverImg.src="bg/hill.png";
+				
+			}		
+		
+			var hoverTrg=document.getElementById("hoverArea3");
+			
+			var hoverImg=document.getElementById("hoverPic");
+			
+			hoverTrg.onclick=function(){
+			
+				hoverImg.src="bg/green.png";
+				
+			}
+		
+			var hoverTrg=document.getElementById("hoverArea2");
+			
+			var hoverImg=document.getElementById("hoverPic");
+			
+			hoverTrg.onclick=function(){
+			
+				hoverImg.src="bg/blue.png";
+				
+			}
+			
+						
+			var hoverTrg=document.getElementById("hoverArea");
+			
+			var hoverImg=document.getElementById("hoverPic");
+			
+			hoverTrg.onclick=function(){
+			
+				hoverImg.src="bg/white.png";
+				
+			}
+			
+			
+		//-->
+		
+	</script> 
+			
+<div id="welcome" ><table cellpadding="25px" style="position:absolute;top:30%;left:30%;background:url('bg/welcomeBg.png');background-repeat:no-repeat;background-size:100%100%;"><tr align="right"><td height="200px" width="300px" ><center><p class="menu1">Welcome to Building Blox!</p></center><br/><p class="text-style">BuildingBlox! Drag the colored boxes around the screen to make things. Like a stick man. Or a house. What can you build? Also, click the pictures at the bottom to change the background.</p><br/><input type="button" onclick="hideWel()" value="&nbsp;&nbsp;&nbsp;ok&nbsp;&nbsp;&nbsp;" /></td></tr></table></div>
+
+			
+			<table><tr><td><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.jdgregson.com%2Fbuildingblox%2F&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:auto; height:35px; background-color:#ffffff;" allowTransparency="true"></iframe></td></tr></table>
+			
+		</body>
+</html>

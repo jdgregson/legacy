@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="New document 1">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="9.1984422"
+     inkscape:cx="315.79525"
+     inkscape:cy="740.55838"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1074"
+     inkscape:window-height="656"
+     inkscape:window-x="7"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#cccccc;fill-opacity:1;stroke:none"
+       d="m 303.42433,287.44864 21.72763,0 c 7.27745,0 14.57022,6.00143 13.13619,13.13618 -1.45569,7.24254 -1.63653,14.48509 0,21.72763 1.60398,7.09849 -5.85874,13.13619 -13.13619,13.13619 l -21.72763,0 c -7.27744,0 -14.98193,-6.09669 -13.13618,-13.13619 1.77226,-6.7592 2.00678,-13.93778 0,-21.72763 -1.8155,-7.04735 5.85874,-13.13618 13.13618,-13.13618 z"
+       id="rect2987"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssssss"
+       inkscape:export-filename="/opt/lampp/htdocs/dev/memory/images/cardBack.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="m 303.22489,289.97868 c -0.71816,-0.92026 -9.64934,2.78482 -9.02538,6.31777 2.81245,20.79356 -0.0777,19.81195 -0.64467,26.94721 0.61047,6.00924 10.08961,8.91848 12.48306,7.41959 -4.43674,-2.46065 -10.0381,-4.55481 -9.00184,-8.19319 1.76606,-8.04339 1.58592,-16.41115 -0.77361,-25.14214 -0.94448,-2.68189 5.50729,-7.45214 8.31037,-6.7251"
+       id="path2990"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc"
+       inkscape:export-filename="/opt/lampp/htdocs/dev/memory/images/cardBack.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="m 306.33305,302.19495 2.03104,0.0214 c -0.60085,-4.79726 1.55589,-7.01498 5.91483,-7.17266 7.93734,-0.62423 6.43536,6.85466 6.62156,10.1972 -0.80907,4.99527 -6.60169,2.12821 -8.0783,7.54858 -0.0471,2.68657 -0.143,7.87246 1.63697,9.40289 l 3.23318,-0.0593 c -0.8537,-2.30801 -2.41309,-4.18174 -1.42694,-7.62196 1.70292,-5.81281 8.47146,-0.28493 7.81344,-10.32964 -0.91802,-5.36738 -1.01153,-11.38259 -8.0783,-11.9188 -6.955,0.34109 -10.56609,2.45649 -10.06477,6.75399 z"
+       id="path2992"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccc"
+       inkscape:export-filename="/opt/lampp/htdocs/dev/memory/images/cardBack.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="m 316.70975,326.04117 c -0.11349,0.0567 -0.20792,0.14586 -0.31671,0.21114 -1.29464,1.36052 -0.41685,2.19914 0.63341,3.06152 0.0803,0.0201 0.43945,0 0.52785,0 3.68011,-0.43046 1.11341,-4.20382 -0.84455,-3.27266 z"
+       id="path2994"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/opt/lampp/htdocs/dev/memory/images/cardBack.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>

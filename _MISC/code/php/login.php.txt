@@ -1,0 +1,138 @@
+<?php
+
+session_start();
+
+/*
+ * Corbin
+ *
+ * (c) Reach - 2011
+ *
+ */
+
+include("config.php");
+
+  // Hide all warnings
+ini_set("display_errors", 0);
+
+ // Login and data handler
+if ($_REQUEST["login"]) {
+  // Set variables with data
+ $SENT_username = $_POST["username"];
+ $SENT_password = $_POST["password"];
+ 
+  // Check if user has sent a username and password
+ if ($SENT_username && $SENT_password) {
+  $db_connect;
+  $db_select;
+  $get_username = mysql_query("SELECT * FROM userdb WHERE username='$SENT_username'");
+  $check_username = mysql_num_rows($get_username);
+
+    // Check if username exists in database
+  if ($check_username != 0) {
+   while ($userdata = mysql_fetch_assoc($get_username)) {
+    $db_username = $userdata["username"];
+    $db_password = $userdata["password"];
+    $db_uid = $userdata["uid"];
+   }
+     // If it does, check if the password matches
+   if ($db_password == $SENT_password) {
+
+// At this poing, login is successful
+    $_SESSION["username"] = $db_username;
+    $_SESSION["uid"] = $db_uid;
+    header("Location: ./");
+
+   }
+    // If not, die with error
+   else {
+    die(header("Location: login.php?error=002"));
+   }
+  }
+   // If not, die with error
+  else {
+   die(header("Location: login.php?error=002"));
+  }
+ }
+  // If no username or password sent, die with an error
+ else {
+  die(header("Location: login.php?error=002"));
+ }
+
+} 
+ // Logout handler
+elseif ($_REQUEST["logout"]) {
+ session_destroy();
+ header("Location: login.php");
+}
+
+ // Login form
+else {
+ if ($_REQUEST["register"] == "1") {
+  header("Location: login.php?error=003");
+ }
+ echo "<html>\n";
+ echo " <head>\n";
+ echo "  <title>".$LOGIN_PAGE_TITLE."</title>\n";
+ echo "  <style type=\"text/css\">\n";
+ echo "    p {\n";
+ echo "     font-family:tahoma;\n";
+ echo "     color:#0093dd;\n";
+ echo "   }\n";
+ echo "  </style>\n";
+ echo " </head>\n";
+ echo " <body>\n";
+ echo "  <table border=\"0\" width=\"auto\" align=\"center\">\n";
+ echo "   <tr>\n";
+ echo "    <td height=\"100px\">\n";
+ echo "    </td>\n";
+ echo "   </tr>\n";
+ echo "   <tr>\n";
+  // Login Form Cell
+ echo "    <td>\n";
+ echo "     <table border=\"1\" width=\"400px\" align=\"center\" bgcolor=\"e5e5e5\" style=\"border-style:hidden;border-color:0093dd;\" cellpadding=\"10\">\n";
+ echo "      <tr>\n";
+ echo "       <td>\n";
+      // Begin form
+ echo "         <form method=\"post\" action=\"login.php?login=1\">\n";
+ echo "          <table><tr><td><p>Username</p></td><td><input type=\"text\" name=\"username\"/></td></tr>\n";
+ echo "          <tr><td><p>Password</p></td><td><input type=\"password\" name=\"password\"/></td></tr>\n";
+ echo "          <tr><td><input type=\"submit\" value=\"login\"/></td><td><a style=\"font-size:10;text-decoration:none;color:0093dd;font-family:tahoma;\" href=\"login.php?register=1\">(register)</a></td></tr></table>\n";
+ echo "         </form>\n";
+      // End form
+ echo "       </td>\n";
+ echo "      </tr>\n";
+     // Begin error handler
+ if ($_REQUEST["error"]) {
+  $ERROR = $_REQUEST["error"];
+  echo "      <tr>\n";
+  echo "       <td align=\"center\">\n";
+  if ($ERROR == "001") {
+   echo $IC_WARN;
+  }
+  elseif ($ERROR == "002") {
+   echo "<p>".$ICL_ERROR."</p>";
+  }
+  elseif ($ERROR == "003") {
+   echo "<p>Registrations are closed. If you want a profile on Reach, you need to ask the administrator (Corbin)</p>";
+  }
+  else {
+   echo "<p>".$UNKNOWN_ERROR."</p>";
+  }
+  echo "      </td>\n";
+  echo "     </tr>\n";
+ }
+    // End error handler
+ echo "     </table>\n";
+ echo "    </td>\n";
+  // End Login Form Cell
+ echo "   </tr>\n";
+ echo "   <tr>\n";
+ echo "    <td>\n";
+ echo "    </td>\n";
+ echo "   </tr>\n";
+ echo "  </table>\n";
+ echo " </body>\n";
+ echo "</html>";
+}
+
+?>

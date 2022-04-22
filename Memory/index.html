@@ -1,0 +1,431 @@
+<html>
+ <head>
+  <title>Memory!</title>
+  <script type="text/javascript">
+  
+   /*
+    * Corbin
+    *
+    * (c) Reach - 06-19-2011
+    *
+    * A Sunday Afternoon preject.
+    *
+    * Memory!
+    * Quick! You only have 4 seconds
+    * to memorize as many cards as 
+    * you can! Then match the pairs!
+    * If a pair matches, you get points.
+    * If it doesn't, you lose points.
+    * When there are no more cards the
+    * game ends. If you have at least
+    * one point when the game ends, you
+    * win! 
+    *
+    */
+ 
+   // CONFIGURATION
+  
+   // Image file locations.
+   var cardBackFile = "images/cardBack.png";
+   var cardBackHighLightFile = "images/cardBackHighLight.png";
+   var cardFrontFile = "images/cardBlank.png"; 
+   var cardEmptyFile = "images/cardEmpty.png"; // The file that is loaded when a pair is matched and the cards disapear.
+   
+   // Hey, no cheating! :( 
+   // Card values.
+   a=2;b=4;c=12;d=12;e=9;f=1;g=7;h=6;i=3;j=7;
+   k=10;l=1;m=10;n=5;o=4;p=8;q=11;r=2;s=3;t=9;
+   u=8;v=":(";w=6;x=11;y=5;
+   
+   // Create needed Variables. 
+   var isActive1 = false;
+   var isActive2 = false;
+   var gameScore = 0;
+   var numberOfCards = 25;
+   var cardsLeft = 25;
+   
+   // FUNCTIONS
+   
+   // Main function.
+   function memory(id) {
+    // Check if the user has just
+    // clicked the last card or not.
+    if (cardsLeft == 1) {
+     endGame();
+    }
+    else {
+     var card = document.getElementById(id);
+     // If the user has just clicked
+     // the second card.
+     if (isActive1 && ! isActive2) {
+      isActive2 = id;
+      if (checkForDoubleClick()) {
+       return;
+      }
+      card.innerHTML = "<p class=\"number\">" + getCardValue(id) + "</p>";
+      card.style.background="url(" + cardFrontFile + ")";
+      card.style.backgroundRepeat="no-repeat";
+      card1 = document.getElementById(isActive1);
+      card2 = document.getElementById(isActive2);
+      // Check if the two cards match.
+      if (card1.innerHTML == card2.innerHTML) {
+       matchCards();
+      }
+     }
+     // If they click a third card. 
+     // Obviously the cards don't 
+     // match, so reset the cards
+     // and count the third click
+     // as the first click in a
+     // new pair. 
+     else if (isActive1 && isActive2) {
+      resetCards(id);
+     }
+     else {
+      // If the user has clicked the
+      // first card. 
+      card.style.background="url(" + cardFrontFile + ")";
+      card.style.backgroundRepeat="no-repeat";
+      isActive1 = id;
+      card.innerHTML = "<p class=\"number\">" + getCardValue(id) + "</p>";
+     }
+    }
+   }
+   
+   //OnMouseOver Decorations.
+   function decorate(id) {
+    if (isActive1 != id && isActive2 != id) {
+     document.getElementById(id).style.background="url(" + cardBackHighLightFile + ")";
+     document.getElementById(id).style.backgroundRepeat="no-repeat";
+    }
+   }
+   
+   //OnMouseOver Undecorations.
+   function undecorate(id) {
+    if (isActive1 != id && isActive2 != id) {
+     document.getElementById(id).style.background="url(" + cardBackFile + ")";
+     document.getElementById(id).style.backgroundRepeat="no-repeat";
+    }
+   }
+   
+   // When cards do not match, 
+   function resetCards(id) {
+    score = document.getElementById("score");
+    // reset cards, 
+    _1 = document.getElementById(isActive1);
+    _2 = document.getElementById(isActive2);
+    _1.style.background="url(" + cardBackFile + ")";
+    _1.style.backgroundRepeat="no-repeat";
+    _1.innerHTML = "";
+    _2.style.background="url(" + cardBackFile + ")";
+    _2.style.backgroundRepeat="no-repeat";
+    _2.innerHTML = "";
+    isActive1 = false;
+    isActive2 = false;
+    // subtract points, 
+    gameScore = gameScore - 5;
+    score.innerHTML = "Score: " + gameScore; 
+    // then start over.
+    memory(id)
+   }
+   
+   // When cards match,
+   function matchCards() {
+    score = document.getElementById("score");
+    // remove cards,
+    _1 = document.getElementById(isActive1);
+    _2 = document.getElementById(isActive2);
+    _1.style.background = "url(" + cardEmptyFile + ")";
+    _1.innerHTML = null;
+    _1.setAttribute("OnMouseOver", "");
+    _1.setAttribute("OnMouseOut", "");
+    _1.setAttribute("OnClick", "");
+    _2.style.background = "url(" + cardEmptyFile + ")";
+    _2.innerHTML = null;
+    _2.setAttribute("OnMouseOver", "");
+    _2.setAttribute("OnMouseOut", "");
+    _2.setAttribute("OnClick", "");
+    isActive1 = false;
+    isActive2 = false;
+    cardsLeft = cardsLeft - 2; 
+    // then add points.
+    gameScore = gameScore + 10;
+    score.innerHTML = "Score: " + gameScore; 
+   }
+   
+   // Fixes a bug. Don't click the same card
+   // twice, because it will count as an in-
+   // correct match, and you'll lose points.
+   // Without this function, it will count as
+   // a match. And we don't want THAT, do we?
+   function checkForDoubleClick() {
+    if (isActive1 == isActive2) {
+     return true;
+    }
+    else {
+     return false;
+    }
+   }
+   
+   // Display the value of all cards
+   // and disable gameplay.
+   function showCards() {
+    for (_i = 1; _i <= numberOfCards; _i++) {
+     c_card = document.getElementById(_i)
+     c_card.innerHTML = "<p class=\"number\">" + getCardValue(_i) + "</p>";
+     c_card.style.background="url(" + cardFrontFile + ")";
+     c_card.style.backgroundRepeat="no-repeat";
+     c_card.setAttribute("OnMouseOver", "");
+     c_card.setAttribute("OnMouseOut", "");
+     c_card.setAttribute("OnClick", "");
+    }
+   }
+   
+   // Hide the value of all cards
+   // and enable gameplay. 
+   function hideCards() {
+    for (_i = 1; _i <= numberOfCards; _i++) {
+     c_card = document.getElementById(_i)
+     c_card.innerHTML = null;
+     c_card.style.background="url(" + cardBackFile + ")";
+     c_card.style.backgroundRepeat="no-repeat";
+     c_card.setAttribute("OnMouseOver", "decorate(id)");
+     c_card.setAttribute("OnMouseOut", "undecorate(id)");
+     c_card.setAttribute("OnClick", "memory(id)"); 
+    }
+   }
+   
+   // Kickstarter. This is called
+   // when the page loads.
+   function start() {
+    doc = document;
+    doc.getElementById("row1").style.display = "";
+    doc.getElementById("row2").style.display = "";
+    doc.getElementById("row3").style.display = "";
+    doc.getElementById("row4").style.display = "";
+    doc.getElementById("row5").style.display = "";
+    doc.getElementById("welcome").style.display="none";
+    showCards();
+    count = document.getElementById('title');
+    self.setTimeout("hideCards()", 4000);
+    self.setTimeout("count.innerHTML='4!'", 0);
+    self.setTimeout("count.innerHTML='3!'", 1000);
+    self.setTimeout("count.innerHTML='2!'", 2000);
+    self.setTimeout("count.innerHTML='1!'", 3000);
+    self.setTimeout("count.innerHTML='Memory!'", 4000);
+   }
+   
+   
+   // Self-descriptive.
+   function getCardValue(id, _i) {
+    if (id == 1 || _i == 1) {return a;}
+    if (id == 2 || _i == 2) {return b;}
+    if (id == 3 || _i == 3) {return c;}
+    if (id == 4 || _i == 4) {return d;}
+    if (id == 5 || _i == 5) {return e;}
+    if (id == 6 || _i == 6) {return f;}
+    if (id == 7 || _i == 7) {return g;}
+    if (id == 8 || _i == 8) {return h;}
+    if (id == 9 || _i == 9) {return i;}
+    if (id == 10 || _i == 10) {return j;}
+    if (id == 11 || _i == 11) {return k;}
+    if (id == 12 || _i == 12) {return l;}
+    if (id == 13 || _i == 13) {return m;}
+    if (id == 14 || _i == 14) {return n;}
+    if (id == 15 || _i == 15) {return o;}
+    if (id == 16 || _i == 16) {return p;}
+    if (id == 17 || _i == 17) {return q;}
+    if (id == 18 || _i == 18) {return r;}
+    if (id == 19 || _i == 19) {return s;}
+    if (id == 20 || _i == 20) {return t;}
+    if (id == 21 || _i == 21) {return u;}
+    if (id == 22 || _i == 22) {return v;}
+    if (id == 23 || _i == 23) {return w;}
+    if (id == 24 || _i == 24) {return x;}
+    if (id == 25 || _i == 25) {return y;}
+   }
+   
+   // Also self-descriptive. Shows
+   // cards, disables gameplay
+   // (actially, showCards() does
+   // that), and tells you if you 
+   // win or lose. 
+   function endGame() {
+    title = document.getElementById("title");
+    title.style.fontSize = "25";
+    if (gameScore >= 1) {
+     // You win, 
+     title.innerHTML = "You Win :D <a href=\"./\" style=\"text-decoration:none\">Again?</a>";
+    }
+    else {
+    // or lose. 
+     title.innerHTML = "Game over :( <a href=\"./\" style=\"text-decoration:none\">Retry</a>";
+    }
+    //End game.
+    showCards();
+   }
+   
+   function welcome() {
+    doc = document;
+    doc.getElementById("row1").style.display = "none";
+    doc.getElementById("row2").style.display = "none";
+    doc.getElementById("row3").style.display = "none";
+    doc.getElementById("row4").style.display = "none";
+    doc.getElementById("row5").style.display = "none";
+   }
+   
+   // No more scripting... :/
+   
+  </script>
+  <style type="text/css">
+   .number, #number {
+    font-family: tahoma;
+    size: 20;
+    font-weight: bold;
+    color: ffffff;
+    position: relative;
+    left: 15px;
+   }
+   
+   .countdown, #countdown {
+    font-family: tahoma;
+    font-size: 30;
+    font-weight: bold;
+    color: ffffff;
+   }
+   
+   .message, #message {
+    font-family: tahoma;
+    size: 20;
+    font-weight: bold;
+    color: ffffff;
+   }
+   
+   .welcome, #welcome {
+    font-family: tahoma;
+    size: 20;
+    font-weight: bold;
+    color: 0093dd;
+   }
+  </style>
+  <link rel="shortcut icon" href="images/cardBack.png"/> 
+  <meta name="description" content="Quick! You only have 4 seconds to memorize as many cards as you can!" />
+ </head>
+ <body onload="welcome()">
+  <table border="0" align="center" cellspacing="4">
+   <tr>
+    <td colspan="5" align="center" bgcolor="0093dd">
+     <p class="countdown" id="title">Memory!</p>
+    </td>
+   </tr>
+   <tr id="welcome" >
+    <td colspan="5" align="center">
+     <p class="welcome">
+    Quick! You only have 4 seconds<br />
+    to memorize as many cards as <br />
+    you can! Then match the pairs!<br />
+    If a pair matches, you get points.<br />
+    If it doesn't, you lose points.<br />
+    When there are no more cards to <br />
+    match, the game ends. If you have <br />
+    at least one point when the game<br />
+    ends, you win!<br />
+    
+      <br />
+      <button OnClick="start()"> Start! :)</button>
+     </p>
+    </td>
+   </tr>
+   <tr id="row1">
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="1">
+     <p class="number" id="1_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="2">
+     <p class="number" id="2_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="3">
+     <p class="number" id="3_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="4">
+     <p class="number" id="4_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="5">
+     <p class="number" id="5_num"></p>
+    </td>
+   </tr>
+   <tr id="row2">
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="6">
+     <p class="number" id="6_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="7">
+     <p class="number" id="7_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="8">
+     <p class="number" id="8_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="9">
+     <p class="number" id="9_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="10">
+     <p class="number" id="10_num"></p>
+    </td>
+   </tr>
+   <tr id="row3">
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="11">
+     <p class="number" id="11_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="12">
+     <p class="number" id="12_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="13">
+     <p class="number" id="13_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="14">
+     <p class="number" id="14_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="15">
+     <p class="number" id="15_num"></p>
+    </td>
+   </tr>
+   <tr id="row4">
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="16">
+     <p class="number" id="16_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="17">
+     <p class="number" id="17_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="18">
+     <p class="number" id="18_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="19">
+     <p class="number" id="19_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="20">
+     <p class="number" id="20_num"></p>
+    </td>
+   </tr>
+   <tr id="row5">
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="21">
+     <p class="number" id="21_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="22">
+     <p class="number" id="22_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="23">
+     <p class="number" id="23_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="24">
+     <p class="number" id="24_num"></p>
+    </td>
+    <td class="cardHolder" OnClick="memory(id)" OnMouseOver="decorate(id)" OnMouseOut="undecorate(id)" width="48px" height="48px" id="25">
+     <p class="number" id="25_num"></p>
+    </td>
+   </tr>
+   <tr>
+    <td colspan="5" align="center" bgcolor="0093dd" height="40px">
+     <p class="message" id="score">Score: 0</p>
+    </td>
+   </tr>
+  </table> 
+ </body>
+</html>

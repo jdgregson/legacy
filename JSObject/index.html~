@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+ <html>
+  <head>
+   <title>JavaScript Object Testing</title>
+   <link rel="shortcut icon" href="favicon.png" />
+
+<script type="text/javascript">
+
+ /*
+  *
+  * Corbin <jdgregson@gmail.com>
+  * Justin <>
+  *
+  */
+
+ testObject = document.createElement("IMG");
+ testObject.setAttribute("src", "ball.png");
+ testObject.setAttribute("height", "100");
+ testObject.setAttribute("width", "100");
+
+ function addObject(obj) {
+  document.getElementById('content').appendChild(obj);
+ }
+
+ function resizeObject(obj, wt, ht) {
+  obj.setAttribute("width", wt);
+  obj.setAttribute("height", ht);
+ }
+
+ function timeZoom(fps) {
+  zoom = self.setInterval('resizeObject(testObject, testObject.width + testObject.czm, testObject.height + testObject.czm)', fps);
+ }
+
+ function setFps(fps) {
+  timeZoom(fps);
+ }
+
+</script>
+
+ </head>
+ <body onload="addObject(testObject);testObject.czm = 1;timeZoom(fps = 100)">
+  <table bgcolor="e5e5e5" width="100%" border="0"><tr><td width="275">
+   <button onclick="testObject.czm = 0;timeZoom()">Stop zoom</button>
+   <button onclick="testObject.czm = 1;timeZoom()">Start zoom</button>
+   <button onclick="testObject.czm = -1;timeZoom()">Reverse zoom</button>
+  </td><td width="150">
+    <form>
+      FPS: <select name="fps">
+      <option value="100">10</option>
+      <option value="50">20</option>
+      <option value="1">1000</option>
+     </select>
+     <input type="button" onclick="setFps(fps.value); return false;" value="set"/>
+    </form>
+   </td><td width="320">
+    <form>
+     Zoom to: <input type="text" name="zoomness" value="100"/>
+     <input value="zoom" type="button" onclick="resizeObject(testObject, zoomness.value, zoomness.value); return false;" />
+    </form>
+   </td><td width="190">
+    <form>
+     Object: <select name="objType">
+      <option value="ball">ball</option>
+      <option value="circle">circle</option>
+      <option value="square">square</option>
+      <option value="boobs">boobs</option>
+     </select>
+     <input type="button" onclick="testObject.src = objType.value + '.png';" value="set"/>
+    </form>
+   </td></tr></table>
+   <br />
+   <br />
+   <br />
+   <table width="100%" border="1" height="100%">
+    <tr>
+     <td id="content" align="center">
+     </td>
+    </tr>
+   </table>
+ </body>
+</html>

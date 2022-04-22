@@ -1,0 +1,215 @@
+body {
+    background-color: #891D25;
+    cursor: crosshair;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: url('art/background.png');
+    background-size: 4%;
+    background-repeat: repeat-x;
+    font-family: arial;
+    color: #888888;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #A64343;
+}
+
+#sprite-container {
+    width: 1000px;
+    height: 1000px;
+}
+
+#city {
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-image: url('art/city.png');
+    background-repeat: repeat-x;
+    z-index: 1;
+}
+
+.little-red-guy {
+    background-image: url('art/little-red-guy.svg');
+    width: 30px;
+    height: 30px;
+    transition: all .500s ease-in-out;
+    z-index: 200;
+}
+
+#laser {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+
+.laser-ball {
+    width: 1px;
+    height: 3px;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #ffffe5;
+    animation-duration: .5s;
+    transition: all .200s ease-in-out;
+    z-index: 10;
+    -webkit-box-shadow: -1px -2px 46px 1px rgba(255,246,224,1);
+    -moz-box-shadow: -1px -2px 46px 1px rgba(255,246,224,1);
+    box-shadow: -1px -2px 46px 1px rgba(255,246,224,1);
+}
+
+.laser-blast {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 500px;
+    background-color: rgba(255, 150, 0, 0.6);
+    transition: all .200s ease-in-out;
+    -webkit-box-shadow: -1px -2px 168px 42px rgba(247,112,49,1);
+    -moz-box-shadow: -1px -2px 168px 42px rgba(247,112,49,1);
+    box-shadow: -1px -2px 168px 42px rgba(247,112,49,1);
+    z-index: 11;
+}
+
+.laser-hit {
+    background-color: rgba(255, 190, 52, 0.7) !important;
+    -webkit-box-shadow: -1px -2px 168px 42px rgba(255,0,0,1);
+    -moz-box-shadow: -1px -2px 168px 42px rgba(255,0,0,1);
+    box-shadow: -1px -2px 168px 42px rgba(255,0,0,1);
+}
+
+#cursor {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-image: url('art/cursor.svg');
+    z-index: 300;
+}
+
+.invisible {
+    display: none;
+}
+
+#input-wrap {
+    font-size: 25pt;
+}
+
+#game-over {
+    font-size: 20pt;
+}
+
+#description {
+    margin: 20px;
+}
+
+#enemies-input {
+    width: 75px;
+    font-size: 15pt;
+    border-radius: 5px;
+    vertical-align: middle;
+    background-color: rgb(112, 57, 57);
+    color: #888888;
+}
+
+#chrome-wrap {
+    margin: 20px;
+    display: inline-flex;
+    text-align: left;
+}
+
+#chrome {
+    width: 30px;
+    height: 30px;
+    margin: auto 0;
+}
+
+#chrome-text {
+    padding-left: 15px;
+}
+
+#play-button {
+    padding: 10px;
+    background-color: rgba(255, 22, 22, 0.23);
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 30pt;
+}
+
+#play-button:active {
+    -webkit-box-shadow: -1px -2px 46px 0px rgba(255,0,0,0.57);
+    -moz-box-shadow: -1px -2px 46px 0px rgba(255,0,0,0.57);
+    box-shadow: -1px -2px 46px 0px rgba(255,0,0,0.57);
+    border: 1px solid red;
+}
+
+#panel {
+    max-width: 600px;
+    width: 60%;
+    position: relative;
+    z-index: 600;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#panel-wrap {
+    position: absolute;
+    z-index: 500;
+    top: 0px;
+}
+
+.victor {
+    background-color: blue;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    border-radius: 25px;
+    transition: all .100s ease-in-out;
+}
+
+.exploding {
+    background-image: url('art/firey-red-guy.svg') !important;
+    -webkit-animation-name: fire-animation;
+    -webkit-animation-duration: .5s;
+    animation-name: fire-animation;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    border-radius: 25px;
+    transition: all .100s ease-in-out;
+    -webkit-box-shadow: -1px -2px 80px 0px rgba(0, 0, 0, 0.92);
+    -moz-box-shadow: -1px -2px 80px 0px rgba(0, 0, 0, 0.92);
+    box-shadow: -1px -2px 80px 0px rgba(0, 0, 0, 0.92);
+}
+
+.exploded {
+    background-image: url('art/exploded-red-guy.svg') !important;
+    -webkit-animation-name: none !important;
+    -webkit-animation-duration: none !important;
+    animation-name: none !important;
+    animation-duration: none !important;
+    animation-iteration-count: none !important;
+    border-radius: 25px;
+    -webkit-box-shadow: -1px -2px 80px 0px rgba(255,119,0,0.87);
+    -moz-box-shadow: -1px -2px 80px 0px rgba(255,119,0,0.87);
+    box-shadow: -1px -2px 80px 0px rgba(255,119,0,0.87);
+}
+
+@-webkit-keyframes fire-animation {
+    from {background-color: rgba(255, 62, 0, 0.3);;}
+    to {background-color: rgba(255, 181, 0, 0.4);;}
+}
+
+@keyframes fire-animation {
+    from {background-color: rgba(255, 62, 0, 0.3);;}
+    to {background-color: rgba(255, 181, 0, 0.4);;}
+}

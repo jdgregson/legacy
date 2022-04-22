@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Math Maker</title>
+        <style type="text/css">
+            h1 {
+                font-family: Tahoma, Geneva, sans-serif;
+            }
+            
+            span {
+                font-size: 12pt;
+                color: #0093dd;
+                font-family: Tahoma, Geneva, sans-serif;
+            }
+            
+            a {
+                text-decoration: none;
+                color: #c41d1d;
+                font-family: Tahoma, Geneva, sans-serif;
+            }
+        </style>
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript">
+            // These functions are simply API functions. They make
+            // THIS page work with the expression creating functions. 
+            // See ./main.js for those functions.
+        
+            var expr = "";
+        
+            function solve(expression) {
+                solution = solveExpression(expr);
+                    
+                solved = document.getElementById("solve");
+                if (solution != "NaN") {
+                    solved.innerHTML = solution;
+                } else {
+                    solved.innerHTML = "Error. Did it divide by zero?";
+                }
+            }
+        
+            function init() {
+                expression = createExpression();
+                expr = expression;
+                display = document.getElementById("expression");
+                display.innerHTML = prettyOperators(expression);
+            }
+            
+        </script>
+    </head>
+    <body onload="init()">
+        <br />
+        <br />
+        <table align="center" border="0">
+            <tr>
+                <td align="center">
+                    <span>Can you solve this expression?</span>
+                     <br />
+                     <br />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <h1 id="expression"></h1>
+                     <br />
+                     <br />
+                </td>
+            </tr>
+            <tr>
+                <td align="center" onclick="solve(expr)" onmouseover="this.setAttribute('style', 'background-color:#e5e5e5;')" onmouseout="this.setAttribute('style', 'background-color:#ffffff;')">
+                    <span id="solve">Show Solution</span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" onclick="window.location.reload()" onmouseover="this.setAttribute('style', 'background-color:#e5e5e5;')" onmouseout="this.setAttribute('style', 'background-color:#ffffff;')">
+                    <span id="solve">New Expression</span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="main.js">View Source Code</a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
